@@ -2,8 +2,6 @@ package com.example.charactercreation.service;
 
 import java.util.ArrayList;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.example.charactercreation.model.Account;
 import com.example.charactercreation.repository.AccountRepository;
 
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final AccountRepository accountRepository;
