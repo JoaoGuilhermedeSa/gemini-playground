@@ -2,7 +2,6 @@ package com.example.charactercreation.controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
@@ -25,6 +24,8 @@ import com.example.charactercreation.dto.CharacterRequest;
 import com.example.charactercreation.dto.CommentRequest;
 import com.example.charactercreation.model.Character;
 import com.example.charactercreation.service.CharacterService;
+import com.example.charactercreation.service.JwtService;
+import com.example.charactercreation.service.UserDetailsServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @WebMvcTest(CharacterController.class)
@@ -37,95 +38,91 @@ class CharacterControllerTest {
 	@MockBean
 	private CharacterService characterService;
 
+	@MockBean
+	private JwtService jwtService;
+
+	@MockBean
+	private UserDetailsServiceImpl userDetailsService;
+
 	@Autowired
 	private ObjectMapper objectMapper;
 
 	@Test
 	void createCharacter_Success() throws Exception {
-		Long accountId = 1L;
 		CharacterRequest characterRequest = new CharacterRequest();
-		characterRequest.setName("TestChar");
-		characterRequest.setVocation("Warrior");
-		characterRequest.setCharacterClass("Knight");
+		characterRequest.setName("Gandalf");
 
 		Character character = new Character();
 		character.setId(1L);
-		character.setName("TestChar");
+		character.setName("Gandalf");
 
 		when(characterService.createCharacter(anyLong(), any(Character.class))).thenReturn(character);
 
-		mockMvc.perform(post("/characters/{accountId}", accountId).contentType(MediaType.APPLICATION_JSON)
+		mockMvc.perform(post("/characters/1").contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(characterRequest))).andExpect(status().isOk())
-				.andExpect(jsonPath("$.name").value("TestChar"));
+				.andExpect(jsonPath("$.name").value("Gandalf"));
 	}
 
 	@Test
 	void createCharacter_AccountNotFound() throws Exception {
-		Long accountId = 1L;
 		CharacterRequest characterRequest = new CharacterRequest();
-		characterRequest.setName("TestChar");
+		characterRequest.setName("Gandalf");
 
 		when(characterService.createCharacter(anyLong(), any(Character.class)))
 				.thenThrow(new IllegalArgumentException("Account not found"));
 
 		jakarta.servlet.ServletException thrown = Assertions.assertThrows(jakarta.servlet.ServletException.class,
 				() -> mockMvc
-						.perform(post("/characters/{accountId}", accountId).contentType(MediaType.APPLICATION_JSON)
+						.perform(post("/characters/1").contentType(MediaType.APPLICATION_JSON)
 								.content(objectMapper.writeValueAsString(characterRequest)))
 						.andExpect(status().isBadRequest()));
 	}
 
 	@Test
 	void editCharacterComment_Success() throws Exception {
-		Long characterId = 1L;
 		CommentRequest commentRequest = new CommentRequest();
-		commentRequest.setComment("New comment");
+		commentRequest.setComment("A wizard is never late.");
 
 		Character character = new Character();
-		character.setId(characterId);
-		character.setComment("New comment");
+		character.setId(1L);
+		character.setName("Gandalf");
+		character.setComment("A wizard is never late.");
 
-		when(characterService.editCharacterComment(anyLong(), anyString())).thenReturn(character);
+		when(characterService.editCharacterComment(anyLong(), any(String.class))).thenReturn(character);
 
-		mockMvc.perform(put("/characters/{characterId}", characterId).contentType(MediaType.APPLICATION_JSON)
+		mockMvc.perform(put("/characters/1").contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(commentRequest))).andExpect(status().isOk())
-				.andExpect(jsonPath("$.comment").value("New comment"));
+				.andExpect(jsonPath("$.comment").value("A wizard is never late."));
 	}
 
 	@Test
 	void editCharacterComment_CharacterNotFound() throws Exception {
-		Long characterId = 1L;
 		CommentRequest commentRequest = new CommentRequest();
-		commentRequest.setComment("New comment");
+		commentRequest.setComment("A wizard is never late.");
 
-		when(characterService.editCharacterComment(anyLong(), anyString()))
+		when(characterService.editCharacterComment(anyLong(), any(String.class)))
 				.thenThrow(new IllegalArgumentException("Character not found"));
 
 		jakarta.servlet.ServletException thrown = Assertions.assertThrows(jakarta.servlet.ServletException.class,
 				() -> mockMvc
-						.perform(put("/characters/{characterId}", characterId).contentType(MediaType.APPLICATION_JSON)
+						.perform(put("/characters/1").contentType(MediaType.APPLICATION_JSON)
 								.content(objectMapper.writeValueAsString(commentRequest)))
 						.andExpect(status().isBadRequest()));
 	}
 
 	@Test
 	void markCharacterForDeletion_Success() throws Exception {
-		Long characterId = 1L;
-
 		doNothing().when(characterService).markCharacterForDeletion(anyLong());
 
-		mockMvc.perform(delete("/characters/{characterId}", characterId)).andExpect(status().isOk());
+		mockMvc.perform(delete("/characters/1")).andExpect(status().isOk());
 	}
 
 	@Test
 	void markCharacterForDeletion_CharacterNotFound() throws Exception {
-		Long characterId = 1L;
-
 		doThrow(new IllegalArgumentException("Character not found")).when(characterService)
 				.markCharacterForDeletion(anyLong());
 
 		jakarta.servlet.ServletException thrown = Assertions.assertThrows(jakarta.servlet.ServletException.class,
-				() -> mockMvc.perform(delete("/characters/{characterId}", characterId))
-						.andExpect(status().isBadRequest()));
+				() -> mockMvc.perform(delete("/characters/1")).andExpect(status().isBadRequest()));
 	}
 }

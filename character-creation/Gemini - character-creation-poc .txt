@@ -1,17 +1,17 @@
 Microsoft Windows [versão 10.0.22631.5472]
 (c) Microsoft Corporation. Todos os direitos reservados.
 
-C:\Users\jpc>cd poc-workspace
+>cd poc-workspace
 
-C:\Users\jpc\poc-workspace>mkdir gemini-playground
+\poc-workspace>mkdir gemini-playground
 
-C:\Users\jpc\poc-workspace>cd gemini-playground
+\poc-workspace>cd gemini-playground
 
-C:\Users\jpc\poc-workspace\gemini-playground>mkdir character-creation-poc
+\poc-workspace\gemini-playground>mkdir character-creation-poc
 
-C:\Users\jpc\poc-workspace\gemini-playground>cd character-creation-poc
+\poc-workspace\gemini-playground>cd character-creation-poc
 
-C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc>gemini
+\poc-workspace\gemini-playground\character-creation-poc>gemini
 
  ███            █████████  ██████████ ██████   ██████ █████ ██████   █████ █████
 ░░░███         ███░░░░░███░░███░░░░░█░░██████ ██████ ░░███ ░░██████ ░░███ ░░███
@@ -912,7 +912,7 @@ Tips for getting started:
 ✦ This concludes the project generation. You can now explore the generated code and run the application.
   I will now try to run the application to see if it's working as expected.
  ╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ✔  Shell mvn spring-boot:run [in C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\charac… │
+ │ ✔  Shell mvn spring-boot:run [in \poc-workspace\gemini-playground\character-creation-poc\charac… │
  │                                                                                                              │
  │    Error: Directory cannot be absolute. Must be relative to the project root directory.                      │
  ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -1811,7 +1811,7 @@ Tips for getting started:
 ✦ This concludes the project generation. You can now explore the generated code and run the application.
   I will now try to run the application to see if it's working as expected.
  ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ✔  Shell mvn spring-boot:run [in C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation]                                                                                                                            │
+ │ ✔  Shell mvn spring-boot:run [in \poc-workspace\gemini-playground\character-creation-poc\character-creation]                                                                                                                            │
  │                                                                                                                                                                                                                                                     │
  │    Error: Directory cannot be absolute. Must be relative to the project root directory.                                                                                                                                                             │
  ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -2448,11 +2448,11 @@ Downloaded from
 Progress (1): 674/862 kB862 kB
 Progress (1): 838/862 kB
 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.jar (862 kB at 5.1 MB/s)
- │    [INFO] Replacing main artifact C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
-                                        │en renamed to C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar.original
+ │    [INFO] Replacing main artifact \poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+                                        │en renamed to \poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar.original
                                                                                                                                                                                                                               │
                                                                                                                                                           │
-  │   [INFO] Installing C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\pom.xml to C:\Users\jpc\.m2\repository\com\example\character-creation\0.0.1-SNAPSHOT\character-creation-0.0.1-SNAPSHOT.pom
+  │   [INFO] Installing \poc-workspace\gemini-playground\character-creation-poc\character-creation\pom.xml to \.m2\repository\com\example\character-creation\0.0.1-SNAPSHOT\character-creation-0.0.1-SNAPSHOT.pom
  │                                                                                                                                                                                                                                          │
  ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ✦ The build was successful! The maven-compiler-plugin with the annotation processor path for Lombok fixed the compilation issues.
@@ -2862,8 +2862,8 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcom
                                                                              │ter-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar
                                                                                                                                                                                                                               │
                                                                                                                                                           │
-  │   [INFO] Installing C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\pom.xml to C:\Users\jpc\.m2\repository\com\example\character-creation\0.0.1-SNAPSHOT\character-creation-0.0.1-SNAPSHOT.pom
- │    [INFO] Installing C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar to                                                                              │
+  │   [INFO] Installing \poc-workspace\gemini-playground\character-creation-poc\character-creation\pom.xml to \.m2\repository\com\example\character-creation\0.0.1-SNAPSHOT\character-creation-0.0.1-SNAPSHOT.pom
+ │    [INFO] Installing \poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar to                                                                              │
                                                                                                                       │
                                                                                                                                                       │
                                                                                                                                                                                                                  │
@@ -3196,8 +3196,8 @@ Progress (1): 1.9 MB       │
                                                                              │ter-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar
                                                                                                                                                                                                                               │
                                                                                                                                                           │
-  │   [INFO] Installing C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\pom.xml to C:\Users\jpc\.m2\repository\com\example\character-creation\0.0.1-SNAPSHOT\character-creation-0.0.1-SNAPSHOT.pom
- │    [INFO] Installing C:\Users\jpc\poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar to                                                                              │
+  │   [INFO] Installing \poc-workspace\gemini-playground\character-creation-poc\character-creation\pom.xml to \.m2\repository\com\example\character-creation\0.0.1-SNAPSHOT\character-creation-0.0.1-SNAPSHOT.pom
+ │    [INFO] Installing \poc-workspace\gemini-playground\character-creation-poc\character-creation\target\character-creation-0.0.1-SNAPSHOT.jar to                                                                              │
                                                                                                                       │
                                                                                                                                                       │
                                                                                                                                                                                                                  │
@@ -5021,11 +5021,11 @@ Progress (1): 1.9 MB       │
                                                                                                                                                                                                                       │
                                                                                                                                                                                                                               │
                                                                                                                                                                                                                      │
-                                                                     │� Servlet Request processing failed: java.lang.IllegalArgumentException: Username already exists
+                                                                     │  Servlet Request processing failed: java.lang.IllegalArgumentException: Username already exists
                                                                              │quest processing failed: java.lang.IllegalArgumentException: Invalid credentials
-                                                                      │:70 � Servlet Request processing failed: java.lang.IllegalArgumentException: Account not found
-                                                            │CharacterNotFound:104 � Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
-                                                        │eletion_CharacterNotFound:127 � Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
+                                                                      │:70   Servlet Request processing failed: java.lang.IllegalArgumentException: Account not found
+                                                            │CharacterNotFound:104   Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
+                                                        │eletion_CharacterNotFound:127   Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
                                                                                                                                                                                                                               │
                                                                                                                                                                             │
                                                                                                                                                                                                                               │
@@ -5151,7 +5151,7 @@ Progress (1): 1.9 MB       │
                                                                                                                                                                                                                       │
                                                                                                                                                                                                                               │
                                                                                                                                                                                                                      │
- │    [ERROR]   AccountControllerTest.createAccount_Success � IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@273fa9e testClass = com.example.charactercreation.controller.AccountControllerTest,         │
+ │    [ERROR]   AccountControllerTest.createAccount_Success   IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@273fa9e testClass = com.example.charactercreation.controller.AccountControllerTest,         │
  │    locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties =                               │
  │    ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@527a8665 key =                                                                        │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5171,7 +5171,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c8db1a35, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   AccountControllerTest.createAccount_UsernameExists � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@273fa9e testClass =       │
+ │    [ERROR]   AccountControllerTest.createAccount_UsernameExists   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@273fa9e testClass =       │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@527a8665 key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5191,7 +5191,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c8db1a35, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   AccountControllerTest.login_InvalidCredentials � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@273fa9e testClass =           │
+ │    [ERROR]   AccountControllerTest.login_InvalidCredentials   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@273fa9e testClass =           │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@527a8665 key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5211,7 +5211,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c8db1a35, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   AccountControllerTest.login_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@273fa9e testClass =                      │
+ │    [ERROR]   AccountControllerTest.login_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@273fa9e testClass =                      │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@527a8665 key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5231,7 +5231,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c8db1a35, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   CharacterControllerTest.createCharacter_AccountNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass   │
+ │    [ERROR]   CharacterControllerTest.createCharacter_AccountNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass   │
  │    = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                      │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6fe04f2a key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5251,7 +5251,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c3aa06b8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   CharacterControllerTest.createCharacter_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass =         │
+ │    [ERROR]   CharacterControllerTest.createCharacter_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass =         │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6fe04f2a key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5271,7 +5271,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c3aa06b8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   CharacterControllerTest.editCharacterComment_CharacterNotFound � IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@28e7bb31 testClass =                                                     │
+ │    [ERROR]   CharacterControllerTest.editCharacterComment_CharacterNotFound   IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@28e7bb31 testClass =                                                     │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6fe04f2a key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5291,7 +5291,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c3aa06b8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   CharacterControllerTest.editCharacterComment_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass =    │
+ │    [ERROR]   CharacterControllerTest.editCharacterComment_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass =    │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6fe04f2a key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5311,7 +5311,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c3aa06b8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_CharacterNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31  │
+ │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_CharacterNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31  │
  │    testClass = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],            │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6fe04f2a key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -5331,7 +5331,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@c3aa06b8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@5926bbb,                                     │
  │    org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@44d52de2, org.springframework.boot.test.context.SpringBootTestAnnotation@9817c40c], resourceBasePath = "src/main/webapp", contextLoader =          │
                                                                                                                                                         │
- │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass  │
+ │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@28e7bb31 testClass  │
  │    = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                      │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6fe04f2a key =             │
  │    [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,   │
@@ -6135,11 +6135,11 @@ Progress (1): 1.9 MB       │
                                                                                                                                                                                                                       │
                                                                                                                                                                                                                               │
                                                                                                                                                                                                                      │
-                                                                     │� Servlet Request processing failed: java.lang.IllegalArgumentException: Username already exists
+                                                                     │  Servlet Request processing failed: java.lang.IllegalArgumentException: Username already exists
                                                                              │quest processing failed: java.lang.IllegalArgumentException: Invalid credentials
-                                                                      │:67 � Servlet Request processing failed: java.lang.IllegalArgumentException: Account not found
-                                                            │CharacterNotFound:101 � Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
-                                                        │eletion_CharacterNotFound:124 � Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
+                                                                      │:67   Servlet Request processing failed: java.lang.IllegalArgumentException: Account not found
+                                                            │CharacterNotFound:101   Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
+                                                        │eletion_CharacterNotFound:124   Servlet Request processing failed: java.lang.IllegalArgumentException: Character not found
                                                                                                                                                                                                                               │
                                                                                                                                                                             │
                                                                                                                                                                                                                               │
@@ -6376,7 +6376,7 @@ Progress (1): 1.9 MB       │
                                                                                                                                                                                                                       │
                                                                                                                                                                                                                               │
                                                                                                                                                                                                                      │
- │    [ERROR]   AccountControllerTest.createAccount_Success � IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@5f596a1a testClass = com.example.charactercreation.controller.AccountControllerTest,        │
+ │    [ERROR]   AccountControllerTest.createAccount_Success   IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@5f596a1a testClass = com.example.charactercreation.controller.AccountControllerTest,        │
  │    locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties =                               │
  │    ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@62977afb key =                                                                                      │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6389,7 +6389,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   AccountControllerTest.createAccount_UsernameExists � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@5f596a1a testClass =      │
+ │    [ERROR]   AccountControllerTest.createAccount_UsernameExists   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@5f596a1a testClass =      │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@62977afb key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6402,7 +6402,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   AccountControllerTest.login_InvalidCredentials � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@5f596a1a testClass =          │
+ │    [ERROR]   AccountControllerTest.login_InvalidCredentials   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@5f596a1a testClass =          │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@62977afb key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6415,7 +6415,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   AccountControllerTest.login_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@5f596a1a testClass =                     │
+ │    [ERROR]   AccountControllerTest.login_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@5f596a1a testClass =                     │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@62977afb key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6428,7 +6428,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.createCharacter_AccountNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass   │
+ │    [ERROR]   CharacterControllerTest.createCharacter_AccountNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass   │
  │    = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                      │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@f5b4ca6 key =                            │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6441,7 +6441,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.createCharacter_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass =         │
+ │    [ERROR]   CharacterControllerTest.createCharacter_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass =         │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@f5b4ca6 key =                            │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6454,7 +6454,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.editCharacterComment_CharacterNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85      │
+ │    [ERROR]   CharacterControllerTest.editCharacterComment_CharacterNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85      │
  │    testClass = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],            │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@f5b4ca6 key =                            │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6467,7 +6467,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.editCharacterComment_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass =    │
+ │    [ERROR]   CharacterControllerTest.editCharacterComment_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass =    │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@f5b4ca6 key =                            │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6480,7 +6480,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_CharacterNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85  │
+ │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_CharacterNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85  │
  │    testClass = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],            │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@f5b4ca6 key =                            │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6493,7 +6493,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass  │
+ │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@4d3bde85 testClass  │
  │    = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                      │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@f5b4ca6 key =                            │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6685,7 +6685,7 @@ Progress (1): 1.9 MB       │
                                                                                                                                                                                                                       │
                                                                                                                                                                                                                               │
                                                                                                                                                                                                                      │
- │    [ERROR]   AccountControllerTest.createAccount_Success � IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@1a34f8e2 testClass = com.example.charactercreation.controller.AccountControllerTest,        │
+ │    [ERROR]   AccountControllerTest.createAccount_Success   IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@1a34f8e2 testClass = com.example.charactercreation.controller.AccountControllerTest,        │
  │    locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties =                               │
  │    ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@222a7429 key =                                                                                      │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6698,7 +6698,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   AccountControllerTest.createAccount_UsernameExists � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@1a34f8e2 testClass =      │
+ │    [ERROR]   AccountControllerTest.createAccount_UsernameExists   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@1a34f8e2 testClass =      │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@222a7429 key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6711,7 +6711,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   AccountControllerTest.login_InvalidCredentials � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@1a34f8e2 testClass =          │
+ │    [ERROR]   AccountControllerTest.login_InvalidCredentials   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@1a34f8e2 testClass =          │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@222a7429 key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6724,7 +6724,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   AccountControllerTest.login_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@1a34f8e2 testClass =                     │
+ │    [ERROR]   AccountControllerTest.login_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@1a34f8e2 testClass =                     │
  │    com.example.charactercreation.controller.AccountControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                          │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@222a7429 key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6737,7 +6737,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.createCharacter_AccountNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass   │
+ │    [ERROR]   CharacterControllerTest.createCharacter_AccountNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass   │
  │    = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                      │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@5e8a678a key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6750,7 +6750,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.createCharacter_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass =         │
+ │    [ERROR]   CharacterControllerTest.createCharacter_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass =         │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@5e8a678a key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6763,7 +6763,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.editCharacterComment_CharacterNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d      │
+ │    [ERROR]   CharacterControllerTest.editCharacterComment_CharacterNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d      │
  │    testClass = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],            │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@5e8a678a key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6776,7 +6776,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.editCharacterComment_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass =    │
+ │    [ERROR]   CharacterControllerTest.editCharacterComment_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass =    │
  │    com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                        │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@5e8a678a key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6789,7 +6789,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_CharacterNotFound � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d  │
+ │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_CharacterNotFound   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d  │
  │    testClass = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],            │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@5e8a678a key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │
@@ -6802,7 +6802,7 @@ Progress (1): 1.9 MB       │
  │    org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f,                                                                                     │
  │    org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7f8a9499,                                        │
                         │.boot.test.context.SpringBootTestAnnotation@fccc0aa8], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
- │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_Success � IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass  │
+ │    [ERROR]   CharacterControllerTest.markCharacterForDeletion_Success   IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@18ab513d testClass  │
  │    = com.example.charactercreation.controller.CharacterControllerTest, locations = [], classes = [com.example.charactercreation.CharacterCreationApplication], contextInitializerClasses = [], activeProfiles = [],                      │
  │    propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@5e8a678a key =                           │
  │    [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration,                                                         │

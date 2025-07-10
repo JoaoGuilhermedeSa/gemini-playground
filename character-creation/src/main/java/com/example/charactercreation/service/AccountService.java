@@ -1,5 +1,6 @@
 package com.example.charactercreation.service;
 
+import com.example.charactercreation.dto.JwtResponse;
 import com.example.charactercreation.model.Account;
 import com.example.charactercreation.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,22 +16,28 @@ public class AccountService {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    public Account createAccount(String username, String password) {
+    @Autowired
+    private JwtService jwtService;
+
+    public JwtResponse createAccount(String username, String password) {
         if (accountRepository.findByUsername(username).isPresent()) {
             throw new IllegalArgumentException("Username already exists");
         }
         Account account = new Account();
         account.setUsername(username);
         account.setPasswordHash(passwordEncoder.encode(password));
-        return accountRepository.save(account);
+        accountRepository.save(account);
+        String token = jwtService.generateToken(username);
+        return new JwtResponse(token);
     }
 
-    public Account login(String username, String password) {
+    public JwtResponse login(String username, String password) {
         Account account = accountRepository.findByUsername(username)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid credentials"));
         if (!passwordEncoder.matches(password, account.getPasswordHash())) {
             throw new IllegalArgumentException("Invalid credentials");
         }
-        return account;
+        String token = jwtService.generateToken(username);
+        return new JwtResponse(token);
     }
 }

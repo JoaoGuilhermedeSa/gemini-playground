@@ -2,14 +2,16 @@ package com.example.charactercreation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication
 @EnableScheduling
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class, UserDetailsServiceAutoConfiguration.class })
 public class CharacterCreationApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CharacterCreationApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(CharacterCreationApplication.class, args);
+	}
 
 }

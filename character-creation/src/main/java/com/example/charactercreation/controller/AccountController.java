@@ -1,6 +1,7 @@
 package com.example.charactercreation.controller;
 
 import com.example.charactercreation.dto.AccountRequest;
+import com.example.charactercreation.dto.JwtResponse;
 import com.example.charactercreation.model.Account;
 import com.example.charactercreation.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,12 @@ public class AccountController {
     private AccountService accountService;
 
     @PostMapping
-    public Account createAccount(@RequestBody AccountRequest accountRequest) {
+    public JwtResponse createAccount(@RequestBody AccountRequest accountRequest) {
         return accountService.createAccount(accountRequest.getUsername(), accountRequest.getPassword());
     }
 
     @PostMapping("/login")
-    public Account login(@RequestBody AccountRequest accountRequest) {
+    public JwtResponse login(@RequestBody AccountRequest accountRequest) {
         return accountService.login(accountRequest.getUsername(), accountRequest.getPassword());
     }
 }

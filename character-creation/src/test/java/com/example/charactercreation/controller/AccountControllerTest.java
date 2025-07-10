@@ -16,8 +16,10 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.charactercreation.dto.AccountRequest;
-import com.example.charactercreation.model.Account;
+import com.example.charactercreation.dto.JwtResponse;
 import com.example.charactercreation.service.AccountService;
+import com.example.charactercreation.service.JwtService;
+import com.example.charactercreation.service.UserDetailsServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @WebMvcTest(AccountController.class)
@@ -30,6 +32,12 @@ class AccountControllerTest {
 	@MockBean
 	private AccountService accountService;
 
+	@MockBean
+	private JwtService jwtService;
+
+	@MockBean
+	private UserDetailsServiceImpl userDetailsService;
+
 	@Autowired
 	private ObjectMapper objectMapper;
 
@@ -39,15 +47,13 @@ class AccountControllerTest {
 		accountRequest.setUsername("testuser");
 		accountRequest.setPassword("password123");
 
-		Account account = new Account();
-		account.setId(1L);
-		account.setUsername("testuser");
+		JwtResponse jwtResponse = new JwtResponse("test-token");
 
-		when(accountService.createAccount(anyString(), anyString())).thenReturn(account);
+		when(accountService.createAccount(anyString(), anyString())).thenReturn(jwtResponse);
 
 		mockMvc.perform(post("/accounts").contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(accountRequest))).andExpect(status().isOk())
-				.andExpect(jsonPath("$.username").value("testuser"));
+				.andExpect(jsonPath("$.token").value("test-token"));
 	}
 
 	@Test
@@ -73,15 +79,13 @@ class AccountControllerTest {
 		accountRequest.setUsername("testuser");
 		accountRequest.setPassword("password123");
 
-		Account account = new Account();
-		account.setId(1L);
-		account.setUsername("testuser");
+		JwtResponse jwtResponse = new JwtResponse("test-token");
 
-		when(accountService.login(anyString(), anyString())).thenReturn(account);
+		when(accountService.login(anyString(), anyString())).thenReturn(jwtResponse);
 
 		mockMvc.perform(post("/accounts/login").contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(accountRequest))).andExpect(status().isOk())
-				.andExpect(jsonPath("$.username").value("testuser"));
+				.andExpect(jsonPath("$.token").value("test-token"));
 	}
 
 	@Test

@@ -1,5 +1,6 @@
 package com.example.charactercreation.service;
 
+import com.example.charactercreation.dto.JwtResponse;
 import com.example.charactercreation.model.Account;
 import com.example.charactercreation.repository.AccountRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,6 +23,9 @@ class AccountServiceTest {
     @Mock
     private BCryptPasswordEncoder passwordEncoder;
 
+    @Mock
+    private JwtService jwtService;
+
     @InjectMocks
     private AccountService accountService;
 
@@ -35,6 +39,7 @@ class AccountServiceTest {
         String username = "testuser";
         String password = "password123";
         String encodedPassword = "encodedPassword";
+        String token = "test-token";
 
         when(accountRepository.findByUsername(username)).thenReturn(Optional.empty());
         when(passwordEncoder.encode(password)).thenReturn(encodedPassword);
@@ -43,15 +48,16 @@ class AccountServiceTest {
             account.setId(1L);
             return account;
         });
+        when(jwtService.generateToken(username)).thenReturn(token);
 
-        Account createdAccount = accountService.createAccount(username, password);
+        JwtResponse jwtResponse = accountService.createAccount(username, password);
 
-        assertNotNull(createdAccount);
-        assertEquals(username, createdAccount.getUsername());
-        assertEquals(encodedPassword, createdAccount.getPasswordHash());
+        assertNotNull(jwtResponse);
+        assertEquals(token, jwtResponse.getToken());
         verify(accountRepository, times(1)).findByUsername(username);
         verify(passwordEncoder, times(1)).encode(password);
         verify(accountRepository, times(1)).save(any(Account.class));
+        verify(jwtService, times(1)).generateToken(username);
     }
 
     @Test
@@ -72,6 +78,7 @@ class AccountServiceTest {
         String username = "testuser";
         String password = "password123";
         String encodedPassword = "encodedPassword";
+        String token = "test-token";
 
         Account account = new Account();
         account.setUsername(username);
@@ -79,13 +86,15 @@ class AccountServiceTest {
 
         when(accountRepository.findByUsername(username)).thenReturn(Optional.of(account));
         when(passwordEncoder.matches(password, encodedPassword)).thenReturn(true);
+        when(jwtService.generateToken(username)).thenReturn(token);
 
-        Account loggedInAccount = accountService.login(username, password);
+        JwtResponse jwtResponse = accountService.login(username, password);
 
-        assertNotNull(loggedInAccount);
-        assertEquals(username, loggedInAccount.getUsername());
+        assertNotNull(jwtResponse);
+        assertEquals(token, jwtResponse.getToken());
         verify(accountRepository, times(1)).findByUsername(username);
         verify(passwordEncoder, times(1)).matches(password, encodedPassword);
+        verify(jwtService, times(1)).generateToken(username);
     }
 
     @Test
