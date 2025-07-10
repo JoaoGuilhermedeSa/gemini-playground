@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Character {
 
@@ -27,6 +29,7 @@ public class Character {
     private LocalDate deletionDate;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "account_id")
     private Account account;
 
