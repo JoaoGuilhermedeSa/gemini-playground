@@ -25,6 +25,10 @@ public class JwtService {
                 .compact();
     }
 
+    public long getExpirationTimeMillis() {
+        return System.currentTimeMillis() + 10 * 60 * 1000;
+    }
+
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }

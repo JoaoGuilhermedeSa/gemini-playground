@@ -31,7 +31,8 @@ public class AccountService {
 		account.setPasswordHash(passwordEncoder.encode(password));
 		accountRepository.save(account);
 		String token = jwtService.generateToken(username);
-		return new JwtResponse(token);
+		long expiresAt = jwtService.getExpirationTimeMillis();
+		return new JwtResponse(token, expiresAt);
 	}
 
 	public JwtResponse login(String username, String password) {
@@ -41,7 +42,8 @@ public class AccountService {
 			throw new IllegalArgumentException("Invalid credentials");
 		}
 		String token = jwtService.generateToken(username);
-		return new JwtResponse(token);
+		long expiresAt = jwtService.getExpirationTimeMillis();
+		return new JwtResponse(token, expiresAt);
 	}
 
 	public Optional<Account> getAccount(Long id) {
