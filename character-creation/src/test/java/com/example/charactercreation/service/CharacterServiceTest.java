@@ -1,23 +1,36 @@
 package com.example.charactercreation.service;
 
-import com.example.charactercreation.model.Account;
-import com.example.charactercreation.model.Character;
-import com.example.charactercreation.repository.AccountRepository;
-import com.example.charactercreation.repository.CharacterRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.example.charactercreation.model.Account;
+import com.example.charactercreation.model.Character;
+import com.example.charactercreation.repository.AccountRepository;
+import com.example.charactercreation.repository.CharacterRepository;
 
 class CharacterServiceTest {
 
@@ -33,19 +46,22 @@ class CharacterServiceTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+		UserDetails userDetails = new User("testuser", "password", new ArrayList<>());
+		UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+		SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
     @Test
     void createCharacter_Success() {
-        Long accountId = 1L;
+        String username = "testuser";
         Account account = new Account();
-        account.setId(accountId);
+        account.setUsername(username);
         account.setCharacters(new ArrayList<>());
 
         Character character = new Character();
         character.setName("TestChar");
 
-        when(accountRepository.findById(accountId)).thenReturn(Optional.of(account));
+        when(accountRepository.findByUsername(username)).thenReturn(Optional.of(account));
         when(characterRepository.save(any(Character.class))).thenAnswer(invocation -> {
             Character savedChar = invocation.getArgument(0);
             savedChar.setId(1L);
@@ -57,27 +73,27 @@ class CharacterServiceTest {
         assertNotNull(createdCharacter);
         assertEquals("TestChar", createdCharacter.getName());
         assertEquals(account, createdCharacter.getAccount());
-        verify(accountRepository, times(1)).findById(accountId);
+        verify(accountRepository, times(1)).findByUsername(username);
         verify(characterRepository, times(1)).save(any(Character.class));
     }
 
     @Test
     void createCharacter_AccountNotFound() {
-        Long accountId = 1L;
+        String username = "testuser";
         Character character = new Character();
 
-        when(accountRepository.findById(accountId)).thenReturn(Optional.empty());
+        when(accountRepository.findByUsername(username)).thenReturn(Optional.empty());
 
-        assertThrows(IllegalArgumentException.class, () -> characterService.createCharacter(character));
-        verify(accountRepository, times(1)).findById(accountId);
+        assertThrows(NoSuchElementException.class, () -> characterService.createCharacter(character));
+        verify(accountRepository, times(1)).findByUsername(username);
         verify(characterRepository, never()).save(any(Character.class));
     }
 
     @Test
     void createCharacter_MaxCharactersReached() {
-        Long accountId = 1L;
+        String username = "testuser";
         Account account = new Account();
-        account.setId(accountId);
+        account.setUsername(username);
         List<Character> characters = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             characters.add(new Character());
@@ -86,20 +102,24 @@ class CharacterServiceTest {
 
         Character character = new Character();
 
-        when(accountRepository.findById(accountId)).thenReturn(Optional.of(account));
+        when(accountRepository.findByUsername(username)).thenReturn(Optional.of(account));
 
         assertThrows(IllegalStateException.class, () -> characterService.createCharacter(character));
-        verify(accountRepository, times(1)).findById(accountId);
+        verify(accountRepository, times(1)).findByUsername(username);
         verify(characterRepository, never()).save(any(Character.class));
     }
 
     @Test
     void editCharacterComment_Success() {
+        String username = "testuser";
         Long characterId = 1L;
         String newComment = "New comment";
+        Account account = new Account();
+        account.setUsername(username);
         Character character = new Character();
         character.setId(characterId);
         character.setComment("Old comment");
+        character.setAccount(account);
 
         when(characterRepository.findById(characterId)).thenReturn(Optional.of(character));
         when(characterRepository.save(any(Character.class))).thenReturn(character);
@@ -114,6 +134,7 @@ class CharacterServiceTest {
 
     @Test
     void editCharacterComment_CharacterNotFound() {
+        String username = "testuser";
         Long characterId = 1L;
         String newComment = "New comment";
 
@@ -125,10 +146,32 @@ class CharacterServiceTest {
     }
 
     @Test
-    void markCharacterForDeletion_Success() {
+    void editCharacterComment_CharacterDoesNotBelongToUser() {
+        String username = "testuser";
         Long characterId = 1L;
+        String newComment = "New comment";
+        Account otherAccount = new Account();
+        otherAccount.setUsername("otheruser");
         Character character = new Character();
         character.setId(characterId);
+        character.setAccount(otherAccount);
+
+        when(characterRepository.findById(characterId)).thenReturn(Optional.of(character));
+
+        assertThrows(IllegalArgumentException.class, () -> characterService.editCharacterComment(characterId, newComment));
+        verify(characterRepository, times(1)).findById(characterId);
+        verify(characterRepository, never()).save(any(Character.class));
+    }
+
+    @Test
+    void markCharacterForDeletion_Success() {
+        String username = "testuser";
+        Long characterId = 1L;
+        Account account = new Account();
+        account.setUsername(username);
+        Character character = new Character();
+        character.setId(characterId);
+        character.setAccount(account);
 
         when(characterRepository.findById(characterId)).thenReturn(Optional.of(character));
         when(characterRepository.save(any(Character.class))).thenReturn(character);
@@ -142,9 +185,27 @@ class CharacterServiceTest {
 
     @Test
     void markCharacterForDeletion_CharacterNotFound() {
+        String username = "testuser";
         Long characterId = 1L;
 
         when(characterRepository.findById(characterId)).thenReturn(Optional.empty());
+
+        assertThrows(IllegalArgumentException.class, () -> characterService.markCharacterForDeletion(characterId));
+        verify(characterRepository, times(1)).findById(characterId);
+        verify(characterRepository, never()).save(any(Character.class));
+    }
+
+    @Test
+    void markCharacterForDeletion_CharacterDoesNotBelongToUser() {
+        String username = "testuser";
+        Long characterId = 1L;
+        Account otherAccount = new Account();
+        otherAccount.setUsername("otheruser");
+        Character character = new Character();
+        character.setId(characterId);
+        character.setAccount(otherAccount);
+
+        when(characterRepository.findById(characterId)).thenReturn(Optional.of(character));
 
         assertThrows(IllegalArgumentException.class, () -> characterService.markCharacterForDeletion(characterId));
         verify(characterRepository, times(1)).findById(characterId);
