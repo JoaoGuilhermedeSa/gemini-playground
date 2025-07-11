@@ -43,10 +43,12 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.csrf().disable()
-				.authorizeHttpRequests(
-						(authz) -> authz.requestMatchers("/accounts/**").permitAll().anyRequest().authenticated())
+				.authorizeHttpRequests((authz) -> authz
+						.requestMatchers("/users/**").permitAll()
+						.anyRequest().authenticated()
+				)
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		http.authenticationProvider(authenticationProvider()); // Use our custom authentication provider
+		http.authenticationProvider(authenticationProvider());
 		http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 		return http.build();
 	}

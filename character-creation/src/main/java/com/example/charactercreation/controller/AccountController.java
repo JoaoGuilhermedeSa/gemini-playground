@@ -1,26 +1,29 @@
 package com.example.charactercreation.controller;
 
-import com.example.charactercreation.dto.AccountRequest;
-import com.example.charactercreation.dto.JwtResponse;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.example.charactercreation.model.Account;
 import com.example.charactercreation.service.AccountService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
 
-    @Autowired
-    private AccountService accountService;
+	@Autowired
+	private AccountService accountService;
 
-    @PostMapping
-    public JwtResponse createAccount(@RequestBody AccountRequest accountRequest) {
-        return accountService.createAccount(accountRequest.getUsername(), accountRequest.getPassword());
-    }
+	@GetMapping
+	public ResponseEntity<Account> getAccount() {
+		String username = SecurityContextHolder.getContext().getAuthentication().getName();
+		return ResponseEntity.ok(accountService.getByUsername(username));
 
-    @PostMapping("/login")
-    public JwtResponse login(@RequestBody AccountRequest accountRequest) {
-        return accountService.login(accountRequest.getUsername(), accountRequest.getPassword());
-    }
+	}
+
 }

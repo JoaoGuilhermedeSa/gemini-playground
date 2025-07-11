@@ -29,7 +29,7 @@ class CharacterServiceTest {
 
     @InjectMocks
     private CharacterService characterService;
-
+    
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -52,7 +52,7 @@ class CharacterServiceTest {
             return savedChar;
         });
 
-        Character createdCharacter = characterService.createCharacter(accountId, character);
+        Character createdCharacter = characterService.createCharacter(character);
 
         assertNotNull(createdCharacter);
         assertEquals("TestChar", createdCharacter.getName());
@@ -68,7 +68,7 @@ class CharacterServiceTest {
 
         when(accountRepository.findById(accountId)).thenReturn(Optional.empty());
 
-        assertThrows(IllegalArgumentException.class, () -> characterService.createCharacter(accountId, character));
+        assertThrows(IllegalArgumentException.class, () -> characterService.createCharacter(character));
         verify(accountRepository, times(1)).findById(accountId);
         verify(characterRepository, never()).save(any(Character.class));
     }
@@ -88,7 +88,7 @@ class CharacterServiceTest {
 
         when(accountRepository.findById(accountId)).thenReturn(Optional.of(account));
 
-        assertThrows(IllegalStateException.class, () -> characterService.createCharacter(accountId, character));
+        assertThrows(IllegalStateException.class, () -> characterService.createCharacter(character));
         verify(accountRepository, times(1)).findById(accountId);
         verify(characterRepository, never()).save(any(Character.class));
     }

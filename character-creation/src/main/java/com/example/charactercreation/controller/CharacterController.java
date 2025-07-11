@@ -5,6 +5,7 @@ import com.example.charactercreation.dto.CommentRequest;
 import com.example.charactercreation.model.Character;
 import com.example.charactercreation.service.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,13 +15,13 @@ public class CharacterController {
     @Autowired
     private CharacterService characterService;
 
-    @PostMapping("/{accountId}")
-    public Character createCharacter(@PathVariable Long accountId, @RequestBody CharacterRequest characterRequest) {
+    @PostMapping
+    public Character createCharacter(@RequestBody CharacterRequest characterRequest) {
         Character character = new Character();
         character.setName(characterRequest.getName());
         character.setVocation(characterRequest.getVocation());
         character.setCharacterClass(characterRequest.getCharacterClass());
-        return characterService.createCharacter(accountId, character);
+        return characterService.createCharacter(character);
     }
 
     @PutMapping("/{characterId}")

@@ -56,7 +56,7 @@ class CharacterControllerTest {
 		character.setId(1L);
 		character.setName("Gandalf");
 
-		when(characterService.createCharacter(anyLong(), any(Character.class))).thenReturn(character);
+		when(characterService.createCharacter(any(Character.class))).thenReturn(character);
 
 		mockMvc.perform(post("/characters/1").contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(characterRequest))).andExpect(status().isOk())
@@ -68,7 +68,7 @@ class CharacterControllerTest {
 		CharacterRequest characterRequest = new CharacterRequest();
 		characterRequest.setName("Gandalf");
 
-		when(characterService.createCharacter(anyLong(), any(Character.class)))
+		when(characterService.createCharacter(any(Character.class)))
 				.thenThrow(new IllegalArgumentException("Account not found"));
 
 		jakarta.servlet.ServletException thrown = Assertions.assertThrows(jakarta.servlet.ServletException.class,
